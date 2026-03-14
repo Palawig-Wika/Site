@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 29 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson29_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Pagdating sa Reyno Delos Cristales</h2>
+            <p>
+                Matapos ang isang buwang <b>paglipad</b>, nakarating si <b>Don Juan</b> at ang <b>higanteng agila</b> sa
+                banyong <b>paliguan</b> ni <b>Maria Blanca</b>. Bumaba si Don Juan mula sa likod ng agila at nagkubli sa
+                likod ng <b>halamanan</b> upang hintayin ang tamang oras. Ganap na alas-kwatro ng madaling araw ay
+                darating si Maria Blanca kasama ang kanyang dalawang kapatid upang maligo, at malalaman ni Don Juan kung
+                sino sa tatlo ang tunay na prinsesa dahil sa kanyang natatanging <b>ganda</b>.
+                <br><br>
+                Nagbilin ang agila kay Don Juan na magtago at hintayin ang pagdapo ng tatlong <b>kalapati</b> sa puno ng
+                <b>peras</b>. Nang dumapo ang mga ito, nakita ni Don Juan si Maria Blanca at nahulog ang kanyang
+                <b>puso</b> sa ganda ng prinsesa. Nang maghubad ng <b>damit</b> si Maria Blanca at lumusong sa tubig,
+                kinuha ni Don Juan ang kanyang mga damit at pinaghahalikan ito. Nabigla si prinsesa Maria Blanca nang
+                makita na wala na ang kanyang mga damit at nagbanta na papatayin ang sinumang kumuha ng mga ito.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Paglipad</b> – paggalaw sa himpapawid gamit ang pakpak o angkop na sasakyan</li>
+                <li><b>Higanteng agila</b> – napakalaking agila na may pambihirang lakas at bilis</li>
+                <li><b>Paliguan</b> – lugar na ginagamit sa pagligo o pagpapaligo ng katawan</li>
+                <li><b>Halamanan</b> – pook na punô ng halaman at puno, karaniwang bahagi ng tahanan</li>
+                <li><b>Ganda</b> – kaakit-akit o natatanging anyo ng isang tao</li>
+                <li><b>Kalapati</b> – uri ng ibon na kilala sa pagiging payapa at malumanay lumipad</li>
+                <li><b>Peras</b> – uri ng puno na may bunga na peras</li>
+                <li><b>Papatayin</b> – sasalakay o gagawa ng paraan upang kitilin ang buhay ng tao</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(29); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

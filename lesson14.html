@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 14 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson14_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang muling Pagtataksil</h2>
+            <p>
+                Giliw na giliw ang hari sa <b>Ibong Adarna</b>. Gabi-gabi kung ito’y dalawin ng hari. Napagpasiyahan ng
+                hari na ipabantay ang Ibong Adarna sa mga anak upang hindi ito mawala o makatakas man. Nagbabala ang
+                hari na mananagot ang sinumang magpabaya sa ibon.
+                <br><br>
+                Halinhinang nagbabantay ang magkakapatid. Hindi naman sang-ayon si <b>Don Pedro</b> sa pagbabantay dahil
+                siya ay isang prinsipe. Si <b>Don Diego</b> naman ay mabilis antukin at madalas na mainip sa bagal ng
+                oras habang nagbabantay. Habang si <b>Don Juan</b> naman ay idinadaan sa pagkausap sa Ibong Adarna upang
+                hindi dalawin ng antok.
+                <br><br>
+                Muling nagbalak ng <b>kataksilan</b> ang dalawang magkapatid. Sa una’y hindi sumang-ayon si Don Diego
+                ngunit napapayag din ito matapos pangakuan ni Don Pedro na gagawin siyang kanang kamay kapag naging hari
+                ito. Nakatulog si Don Juan sa puyat at pagod dahil sa magkasunod na <b>iskedyul</b> ng pagbabantay nito
+                sa ibon. Habang natutulog ay sinamantala ng dalawa niyang kapatid na pakawalan ang Ibong Adarna.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Giliw</b> – lubos na minamahal o iniingatan</li>
+                <li><b>Mananagot</b> – pananagutan o pagpaparusa sa hindi pagsunod</li>
+                <li><b>Sang-ayon</b> – sumusuporta o pumapayag</li>
+                <li><b>Antukin</b> – madaling makaramdam ng antok o gusto matulog</li>
+                <li><b>Mainip</b> – hindi matiis ang pagtagal o pagkaantala</li>
+                <li><b>Idinadaan</b> – isinasagawa o ginagawa sa pamamagitan ng isang paraan</li>
+                <li><b>Kataksilan</b> – panlilinlang o pagtataksil sa kapwa</li>
+                <li><b>Kanang kamay</b> – pangunahing katuwang o tagapayo sa pamumuno</li>
+                <li><b>Iskedyul</b> – takdang oras o plano ng gawain</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(14); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

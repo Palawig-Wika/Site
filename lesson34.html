@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 34 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson34_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Kastilyo</h2>
+            <p>
+                Sa susunod na pagkikita, iniutos ni <b>Haring Salermo</b> kay <b>Don Juan</b> na itakip ang
+                <b>bundok</b> sa gitna ng <b>karagatan</b> at tayuan ito ng <b>kastilyo</b>. Kailangan din lagyan ng
+                <b>gulod</b> at <b>kanyon</b> ang kahariang itatayo.
+                <br><br>
+                Binigyan si Don Juan ng lahat ng kailangan niyang <b>materyales</b> tulad ng <b>palataw</b>,
+                <b>bareta</b>, <b>piko</b>, <b>kalaykay</b>, <b>maso</b>, at <b>kutsara</b> upang masubukan ang kanyang
+                <b>katalinuhan</b>. Katulad ng dati, nakipagkita muli si Don Juan kay <b>Maria Blanca</b>. Sa halip na
+                mag-alala si prinsipe, pinayuhan siya ni Maria Blanca na magpahinga na lamang at siya na ang gagawa ng
+                utos ng hari.
+                <br><br>
+                Ginamit ni Maria Blanca ang kanyang <b>kapangyarihan</b> upang ilipat ang bundok at itabon ito sa
+                karagatan, na naging isang <b>muog</b>. Ikalima ng hapon, inutusan ng hari na alisin ang kastilyo sa
+                gitna ng karagatan. Sa tulong ng kapangyarihan ni Maria Blanca, nawala ang kastilyo at muling bumalik sa
+                dati ang lahat. Sa ganitong paraan, natupad na naman ni Don Juan ang pagsubok ng hari, na ipinakita ang
+                kanyang <b>talino</b> at <b>tiyaga</b>.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Karagatan</b> – malawak na dagat o anyong tubig</li>
+                <li><b>Gulod</b> – mataas na bahagi ng lupa, parang burol o ridge</li>
+                <li><b>Kanyon</b> – sandatang pambato o baril na malaki</li>
+                <li><b>Materyales</b> – kagamitan o bagay na ginagamit sa paggawa o konstruksiyon</li>
+                <li><b>Palataw</b> – malaking pala o kagamitan sa paghuhukay</li>
+                <li><b>Bareta</b> – matulis na panukat o kasangkapan sa pagbabarena o hukay</li>
+                <li><b>Muog</b> – istruktura o kuta na matibay at pangdepensa</li>
+                <li><b>Talino</b> – katalinuhan, karunungan, o kakayahang mag-isip ng maayos</li>
+                <li><b>Tiyaga</b> – pagtitiyaga o pagpupursigi sa isang gawain hanggang matapos</li>
+                <li><b>Kapangyarihan</b> – kakayahang gumawa ng mahiwaga o pambihirang bagay</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(34); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

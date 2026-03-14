@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mga Aralin - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lessons_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Locked lesson button */
+        .lesson-locked {
+            opacity: 0.35;
+            cursor: not-allowed !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            position: relative;
+        }
+
+        .lesson-locked::after {
+            content: '🔒';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.1rem;
+            opacity: 0.6;
+        }
+
+        .lesson-locked:hover {
+            transform: none !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #f1f5f9 !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        /* Progress indicator */
+        .progress-bar-wrap {
+            margin: 0 0 1.5rem 0;
+        }
+
+        .progress-label {
+            color: #fcd34d;
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .progress-bar-bg {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 99px;
+            height: 8px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            background: #eab308;
+            height: 100%;
+            border-radius: 99px;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="back-btn-wrap">
+            <a href="korido.html" class="back-btn">← Bumalik sa Korido</a>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="progress-bar-wrap">
+            <div class="progress-label">
+                <span>Iyong Pag-unlad</span>
+                <span id="progress-text">Aralin 1 / 46</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2>Unang Bahagi</h2>
+            <div class="lessons-grid">
+                <a href="lesson1.html" class="lesson-btn" data-lesson="1">Aralin 1</a>
+                <a href="lesson2.html" class="lesson-btn" data-lesson="2">Aralin 2</a>
+                <a href="lesson3.html" class="lesson-btn" data-lesson="3">Aralin 3</a>
+                <a href="lesson4.html" class="lesson-btn" data-lesson="4">Aralin 4</a>
+                <a href="lesson5.html" class="lesson-btn" data-lesson="5">Aralin 5</a>
+                <a href="lesson6.html" class="lesson-btn" data-lesson="6">Aralin 6</a>
+                <a href="lesson7.html" class="lesson-btn" data-lesson="7">Aralin 7</a>
+                <a href="lesson8.html" class="lesson-btn" data-lesson="8">Aralin 8</a>
+                <a href="lesson9.html" class="lesson-btn" data-lesson="9">Aralin 9</a>
+                <a href="lesson10.html" class="lesson-btn" data-lesson="10">Aralin 10</a>
+                <a href="lesson11.html" class="lesson-btn" data-lesson="11">Aralin 11</a>
+                <a href="lesson12.html" class="lesson-btn" data-lesson="12">Aralin 12</a>
+                <a href="lesson13.html" class="lesson-btn" data-lesson="13">Aralin 13</a>
+                <a href="lesson14.html" class="lesson-btn" data-lesson="14">Aralin 14</a>
+                <a href="lesson15.html" class="lesson-btn" data-lesson="15">Aralin 15</a>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2>Ikalawang Bahagi</h2>
+            <div class="lessons-grid">
+                <a href="lesson16.html" class="lesson-btn" data-lesson="16">Aralin 16</a>
+                <a href="lesson17.html" class="lesson-btn" data-lesson="17">Aralin 17</a>
+                <a href="lesson18.html" class="lesson-btn" data-lesson="18">Aralin 18</a>
+                <a href="lesson19.html" class="lesson-btn" data-lesson="19">Aralin 19</a>
+                <a href="lesson20.html" class="lesson-btn" data-lesson="20">Aralin 20</a>
+                <a href="lesson21.html" class="lesson-btn" data-lesson="21">Aralin 21</a>
+                <a href="lesson22.html" class="lesson-btn" data-lesson="22">Aralin 22</a>
+                <a href="lesson23.html" class="lesson-btn" data-lesson="23">Aralin 23</a>
+                <a href="lesson24.html" class="lesson-btn" data-lesson="24">Aralin 24</a>
+                <a href="lesson25.html" class="lesson-btn" data-lesson="25">Aralin 25</a>
+                <a href="lesson26.html" class="lesson-btn" data-lesson="26">Aralin 26</a>
+                <a href="lesson27.html" class="lesson-btn" data-lesson="27">Aralin 27</a>
+                <a href="lesson28.html" class="lesson-btn" data-lesson="28">Aralin 28</a>
+                <a href="lesson29.html" class="lesson-btn" data-lesson="29">Aralin 29</a>
+                <a href="lesson30.html" class="lesson-btn" data-lesson="30">Aralin 30</a>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2>Ikatlong Bahagi</h2>
+            <div class="lessons-grid">
+                <a href="lesson31.html" class="lesson-btn" data-lesson="31">Aralin 31</a>
+                <a href="lesson32.html" class="lesson-btn" data-lesson="32">Aralin 32</a>
+                <a href="lesson33.html" class="lesson-btn" data-lesson="33">Aralin 33</a>
+                <a href="lesson34.html" class="lesson-btn" data-lesson="34">Aralin 34</a>
+                <a href="lesson35.html" class="lesson-btn" data-lesson="35">Aralin 35</a>
+                <a href="lesson36.html" class="lesson-btn" data-lesson="36">Aralin 36</a>
+                <a href="lesson37.html" class="lesson-btn" data-lesson="37">Aralin 37</a>
+                <a href="lesson38.html" class="lesson-btn" data-lesson="38">Aralin 38</a>
+                <a href="lesson39.html" class="lesson-btn" data-lesson="39">Aralin 39</a>
+                <a href="lesson40.html" class="lesson-btn" data-lesson="40">Aralin 40</a>
+                <a href="lesson41.html" class="lesson-btn" data-lesson="41">Aralin 41</a>
+                <a href="lesson42.html" class="lesson-btn" data-lesson="42">Aralin 42</a>
+                <a href="lesson43.html" class="lesson-btn" data-lesson="43">Aralin 43</a>
+                <a href="lesson44.html" class="lesson-btn" data-lesson="44">Aralin 44</a>
+                <a href="lesson45.html" class="lesson-btn" data-lesson="45">Aralin 45</a>
+                <a href="lesson46.html" class="lesson-btn" data-lesson="46">Aralin 46</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        // Apply locks and update progress bar on page load
+        applyLessonLocks();
+
+        const unlocked = getUnlockedCount();
+        const pct = Math.round(((unlocked - 1) / 46) * 100);
+        document.getElementById('progress-fill').style.width = pct + '%';
+        document.getElementById('progress-text').textContent = 'Aralin ' + unlocked + ' / 46';
+    </script>
+</body>
+
+</html>

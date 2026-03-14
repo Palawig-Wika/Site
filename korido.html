@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korido - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/background%20image%202.gif') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #1a1a2e;
+        }
+
+        .korido-content h1 {
+            font-size: 4rem;
+            color: #eab308;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .korido-content h2 {
+            font-size: 1.4rem;
+            color: #e2e8f0;
+            font-weight: normal;
+            margin-bottom: 2rem;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+            letter-spacing: 0.05em;
+        }
+
+        .korido-btn {
+            background: rgba(26, 26, 46, 0.85);
+            color: #f1f5f9;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #eab308;
+            transition: all 0.3s;
+            font-size: 1.05rem;
+            font-weight: 600;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            text-shadow: none;
+        }
+
+        .korido-btn:hover {
+            background: #eab308;
+            color: #1a1a2e;
+            border-color: #eab308;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(234, 179, 8, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="korido-page">
+        <div class="korido-content">
+            <h1>Ibong Adarna</h1>
+            <h2>Akdang korido</h2>
+            <div class="korido-buttons">
+                <a href="korido-info.html" class="korido-btn">Korido</a>
+                <a href="korido-traits.html" class="korido-btn">Katangian ng isang korido</a>
+                <a href="lessons.html" class="korido-btn">Mga Aralin</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

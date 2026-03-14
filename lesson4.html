@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 4 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson4_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Kabiguan ni Don Diego</h2>
+            <p>
+                Makalipas ang ilang buwang paghihintay ay hindi pa rin nakababalik si Don Pedro sa kaharian ng Berbanya.
+                Dahil dito ay labis na nabahala ang hari at ang buong palasyo. Kaya naman inutusan ni Haring Fernando
+                ang ikalawang prinsipe na si Don Diego na maglakbay upang hanapin ang kaniyang kapatid at hulihin ang
+                mahiwagang Ibong Adarna na sinasabing makapagpapagaling sa kaniyang karamdaman. Tinanggap ni Don Diego
+                ang <b>atas</b> ng hari at agad na naglakbay patungo sa malayong Bundok Tabor.
+                <br><br>
+                Sa loob ng limang buwan ay naglakbay siya sa mga <b>ilang</b> na lugar, tumawid sa matatarik na landas
+                at masukal na kagubatan. Sa tagal ng kanilang paglalakbay ay hindi kinaya ng kaniyang kabayo ang hirap
+                ng daan kaya ito ay <b>nalagutan ng hininga</b>. Gayunpaman, ipinagpatuloy ni Don Diego ang kaniyang
+                paglalakbay hanggang sa marating niya ang mahiwagang punong Piedras Platas na kumikislap sa ilalim ng
+                liwanag ng buwan. Lubos siyang <b>nabighani</b> sa kakaibang kagandahan ng puno at sa mahiwagang paligid
+                nito.
+                <br><br>
+                Nagpasya siyang maghintay sa ilalim ng puno upang abangan ang pagdating ng Ibong Adarna. Subalit nang
+                dumating ang gabi at marinig niya ang napakagandang <b>awitin</b> ng ibon, unti-unti siyang dinala ng
+                himig nito sa malalim na <b>pagkakahimbing</b>. Tulad ng nangyari kay Don Pedro, matapos umawit ng
+                pitong beses ang ibon ay <b>napatakan</b> ng ipot si Don Diego. Dahil sa hiwaga ng ibon, siya rin ay
+                naging <b>estatwa</b> ng bato at napabilang sa mga nabigong magtangkang hulihin ang Ibong Adarna, katabi
+                ng kaniyang kapatid na si Don Pedro.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Atas</b> – utos o ipinag-uutos ng may kapangyarihan</li>
+                <li><b>Ilang</b> – malayo at walang kataong lugar</li>
+                <li><b>Nalagutan ng hininga</b> – namatay</li>
+                <li><b>Nabighani</b> – labis na namangha o naakit</li>
+                <li><b>Awitin</b> – kanta o himig na inaawit</li>
+                <li><b>Pagkakahimbing</b> – malalim na pagtulog</li>
+                <li><b>Napatakan</b> – natuluan o nadapuan ng patak</li>
+                <li><b>Estatwa</b> – anyong parang rebulto o iskultura</li>
+                <li><b>Masukal</b> – makapal at mahirap daanang kagubatan</li>
+                <li><b>Himig</b> – tono o tunog ng isang awit</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(4); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

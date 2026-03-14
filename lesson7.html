@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 7 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson7_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Kagilagilalas na Ibong Adarna</h2>
+            <p>
+                Matiyagang naghintay si Don Juan sa ilalim ng kumikinang na punong <b>Piedras Platas</b> hanggang sa
+                sumapit ang dapithapon. Tahimik niyang pinagmasdan ang paligid habang hinihintay ang pagdating ng
+                mahiwagang ibon. Hindi nagtagal ay dumating ang <b>Ibong Adarna</b> at dumapo sa sanga ng puno. Lubhang
+                kahanga-hanga ang <b>kariktan</b> ng ibon sapagkat kumikislap ang makukulay nitong balahibo at tila
+                nagbibigay-liwanag sa buong paligid.
+                <br><br>
+                Maya-maya ay nagsimulang umawit ang ibon. Ang kaniyang <b>melodiya</b> ay napakalambing at nakaaakit
+                kaya unti-unting nakaramdam si Don Juan ng matinding <b>pagkaidlip</b>. Upang labanan ang antok, agad
+                niyang <b>sinugatan</b> ang kaniyang palad gamit ang matalim na kutsilyo at pinigaan ito ng <b>dayap</b>
+                upang manatili siyang gising. Sa bawat awit ng ibon ay nadaragdagan ang sugat sa kaniyang kamay; kaya
+                ang pitong awit ng ibon ay katumbas ng pitong sugat sa kaniyang palad.
+                <br><br>
+                Matapos umawit ang ibon ay <b>dumumi</b> ito, ngunit naging maingat si Don Juan kaya nakaiwas siya sa
+                patak ng ipot na nagiging sanhi ng pagiging bato ng sinumang matamaan nito. Pagkaraan nito ay nakatulog
+                ang ibon na nakabuka ang mga pakpak at nakadilat ang mga mata, gaya ng kakaibang <b>kaugalian</b> nito.
+                Nang makatiyak na mahimbing na ang tulog ng ibon, marahang <b>umakyat</b> si Don Juan sa puno at mabilis
+                na sinunggaban ang Ibong Adarna gamit ang ibinigay na sintas na ginto.
+                <br><br>
+                Tagumpay na nahuli ni Don Juan ang mahiwagang ibon. Agad niya itong dinala sa dampa ng ermitanyo upang
+                ipakita ang kaniyang tagumpay. Hinimas ng matandang ermitanyo ang ibon upang ito ay kumalma at saka
+                inilagay sa isang <b>hawla</b> upang hindi ito makatakas. Labis ang pasasalamat ni Don Juan sa tulong at
+                gabay na ibinigay sa kaniya ng ermitanyo.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Kariktan</b> – pambihirang kagandahan</li>
+                <li><b>Melodiya</b> – maayos at magandang tunog ng isang awit</li>
+                <li><b>Pagkaidlip</b> – pakiramdam na gustong makatulog</li>
+                <li><b>Sinugatan</b> – nasaktan o hiniwa ang balat</li>
+                <li><b>Dayap</b> – maasim na prutas na ginagamit upang pigain sa sugat</li>
+                <li><b>Dumumi</b> – paglabas ng dumi ng hayop o ibon</li>
+                <li><b>Kaugalian</b> – nakasanayang paraan ng kilos o gawain</li>
+                <li><b>Umakyat</b> – pumunta sa mas mataas na lugar</li>
+                <li><b>Hawla</b> – kulungang lalagyan ng ibon o hayop</li>
+                <li><b>Dapithapon</b> – oras ng paglubog ng araw o papalubog na ang araw</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(7); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

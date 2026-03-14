@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 10 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson10_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Katampalasan nina Don Pedro at Don Diego</h2>
+            <p>
+                Bumalik ng palasyo ang magkapatid na sina <b>Don Pedro</b> at <b>Don Diego</b>. Bagama’t nakaratay pa
+                rin, pinilit ni <b>Don Fernando</b> na bumangon upang mayakap ang dalawang anak na matagal nang nawalay
+                sa kanya. Nanlumo ito nang malaman na hindi kasama ng magkapatid ang bunsong anak na si <b>Don Juan</b>.
+                Tinanong ng hari sa magkapatid kung nasaan si Don Juan ngunit ang tanging sagot nila ay hindi nila alam.
+                <br><br>
+                Iniharap ng magkapatid sa hari ang <b>Ibong Adarna</b>. Ngunit nabigla ito dahil pangit at lulugo-lugo
+                ang itsura ng ibon. Tiyak ng hari na sa itsura na iyon ng Ibong Adarna ay imbes na mapapagaling ng awit
+                nito ang may sakit ay mas lalo pang lulubha. Sa pag-aalala ay muling nanariwa ang panaginip ng hari
+                tungkol sa kanyang bunsong anak na pinaslang ng dalawang buhong.
+                <br><br>
+                Lumipas ang mga araw at mas lalo pang lumubha ang sakit ng hari. Ang Ibong Adarna ay ayaw pa ring
+                kumanta dahil wala ang totoong nagmamay-ari sa kanya na si Don Juan. Maging ang Ibong Adarna ay umaasa
+                na buhay pa ang prinsipe at matutuklasan din ng hari at reyna ang pagtataksil na ginawa ng dalawa pa
+                nilang anak.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Nanlumo</b> – nalungkot o nadismaya</li>
+                <li><b>Tanging</b> – nag-iisa o ang iisa lamang</li>
+                <li><b>Sagap</b> – agarang pagsagot o pagtugon</li>
+                <li><b>Pangit</b> – hindi kaaya-aya sa paningin</li>
+                <li><b>Lulugo-lugo</b> – mukhang malata, hindi maayos ang anyo</li>
+                <li><b>Lulubha</b> – mas lalo pang sasama ang kalagayan o sakit</li>
+                <li><b>Nanariwa</b> – muling naalala o bumalik sa alaala</li>
+                <li><b>Buhong</b> – traydor o taksil sa kapwa</li>
+                <li><b>Matutuklasan</b> – malalaman o madidiskubre ang katotohanan</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(10); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

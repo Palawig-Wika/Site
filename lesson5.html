@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 5 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson5_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Pakikipagsapalaran ni Don Juan</h2>
+            <p>
+                Tatlong taon nang patuloy na lumalala ang karamdaman ni Haring Fernando kaya labis na nag-aalala ang
+                buong kaharian ng Berbanya. Dahil hindi pa rin nakababalik sina Don Pedro at Don Diego, nagpasya ang
+                bunsong prinsipe na si Don Juan na hanapin ang kaniyang mga kapatid at ang mahiwagang Ibong Adarna upang
+                mailigtas ang kaniyang ama. Lumapit siya sa hari at reyna upang humingi ng <b>basbas</b> bago simulan
+                ang kaniyang paglalakbay. Bagaman nag-aalala ang kaniyang mga magulang, pinayagan din nila siya at
+                nagbigay ng mga <b>tagubilin</b> upang maging gabay sa kaniyang paglalakbay.
+                <br><br>
+                Hindi tulad ng kaniyang mga kapatid na may kabayo, si Don Juan ay naglakbay nang naglalakad lamang. Ang
+                tanging baon niya ay limang tinapay at ang kaniyang <b>pananalig</b> sa Mahal na Birhen na siyang
+                pinagtitiwalaan niyang gagabay sa kaniya sa bawat hakbang. Sa loob ng apat na buwan ay tinahak niya ang
+                mahahabang daan, masukal na kagubatan, at mga landas na punô ng <b>pagsubok</b>. Tiniis niya ang gutom,
+                pagod, at matinding <b>pagtitiis</b> upang maipagpatuloy ang kaniyang misyon.
+                <br><br>
+                Sa wakas ay narating ni Don Juan ang paanan ng Bundok Tabor. Habang siya ay nagpapahinga sa lilim ng mga
+                puno, nakatagpo siya ng isang matandang <b>ketongin</b> na nanghihina at tila matagal nang nagdurusa sa
+                sakit. Sa kabila ng pagod at kakapusan sa pagkain, nagpakita si Don Juan ng <b>habag</b> at kabutihan sa
+                matanda, na siyang naging simula ng isang mahalagang pangyayari sa kaniyang paglalakbay.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Basbas</b> – pagpapala o pahintulot ng magulang o nakatatanda</li>
+                <li><b>Tagubilin</b> – payo o bilin na dapat sundin</li>
+                <li><b>Pananalig</b> – matibay na pananampalataya o tiwala</li>
+                <li><b>Pagsubok</b> – mahirap na karanasang kailangang lampasan</li>
+                <li><b>Pagtitiis</b> – pagtanggap sa hirap o sakit nang may tiyaga</li>
+                <li><b>Ketongin</b> – taong may sakit na ketong o malubhang sakit sa balat</li>
+                <li><b>Habag</b> – awa o malasakit sa kapwa</li>
+                <li><b>Misyon</b> – layunin o mahalagang gawain na kailangang tuparin</li>
+                <li><b>Kakapusan</b> – kakulangan sa isang bagay</li>
+                <li><b>Paglalakbay</b> – pagpunta sa malayong lugar</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(5); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

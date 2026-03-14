@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 32 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson32_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Ikalawang Pagsubok</h2>
+            <p>
+                Nagkita si <b>Don Juan</b> at si <b>Haring Salermo</b> para sa ikalawang <b>pagsubok</b>. Inilabas ng
+                hari sa <b>hardin</b> ang isang <b>prasko</b> na may lamang labindalawang <b>negrito</b> at pinakawalan
+                ito sa <b>karagatan</b>. Utos ng hari na hulihin ni Don Juan ang lahat ng negrito at ibalik sa prasko
+                bago sumapit ang <b>kinabukasan</b>, upang makaligtas siya sa <b>kaparusahan</b> ng kamatayan.
+                <br><br>
+                Nang makipagkita si Don Juan kay <b>Maria Blanca</b>, nalungkot siya dahil sa lawak ng karagatan ay
+                mukhang imposible ang pagsasakatuparan ng utos. Pinayapa siya ni Maria Blanca at inutusan niyang kumuha
+                ng <b>ilaw</b>. Nang sumapit ang ikaapat ng madaling araw, nagtungo sila sa <b>tabing-dagat</b>. Ginamit
+                ni Maria Blanca ang kanyang <b>mahika</b> at pinilit ang mga negrito na bumalik sa prasko upang hindi
+                maranasan ang kanyang galit.
+                <br><br>
+                Kinabukasan, nakita ng hari ang prasko at lahat ng labindalawang negrito ay nasa loob nito. Nagalit ang
+                hari dahil hindi niya magawang parusahan si Don Juan tulad ng ginawa niya sa iba pang nagtangkang
+                manligaw kay Maria Blanca. Dahil dito, nag-isip ang hari ng mas mahigpit at mas mabigat na pagsubok para
+                sa prinsipe.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Pagsubok</b> – hamon o gawain na kailangang lampasan upang patunayan ang tapang, talino, o
+                    kakayahan</li>
+                <li><b>Hardin</b> – lugar na puno ng halaman, bulaklak, at puno, karaniwang bahagi ng palasyo</li>
+                <li><b>Prasko</b> – sisidlang may takip na ginagamit sa pag-iimbak ng likido o hayop</li>
+                <li><b>Negrito</b> – maliliit na nilalang o espiritu sa kuwentong-bayan, dito ay mahiwagang nilalang
+                </li>
+                <li><b>Karagatan</b> – malawak na dagat o anyong tubig</li>
+                <li><b>Kinabukasan</b> – susunod na araw o panahon pagkatapos ng kasalukuyan</li>
+                <li><b>Kaparusahan</b> – ganting ibinibigay sa nagkasala o lumabag</li>
+                <li><b>Tabing-dagat</b> – baybayin o dalampasigan ng dagat</li>
+                <li><b>Salamangka</b> – kapangyarihang mahiwaga na nagagawa ang hindi pangkaraniwan</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(32); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

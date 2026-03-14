@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanggunian - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #9bb4c0;
+            /* TODO: replace with your chosen background color */
+        }
+
+        .reference-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .reference-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #eab308;
+            border-radius: 8px;
+            padding: 14px 20px;
+            transition: transform 0.2s, background 0.2s;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+
+        .reference-card:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        .reference-card em {
+            font-style: italic;
+            color: #fcd34d;
+        }
+
+        .reference-card a {
+            color: #eab308;
+            font-weight: 600;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .reference-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="back-btn-wrap">
+            <a href="index.html" class="back-btn">← Bumalik sa Home</a>
+        </div>
+        <div class="content-card">
+            <h2 style="text-align:center; font-size:1.8rem;">Sanggunian</h2>
+            <p style="text-align:center; margin-bottom:1rem; color:#94a3b8;">Mga Pinagkuhaan ng Kaalaman Patungkol sa
+                <em style="color:#fcd34d;">Ibong Adarna</em>
+            </p>
+
+            <div class="reference-list">
+                <div class="reference-card">
+                    Gungab, P. A. L. (2023). <em>Adarna: Remediating Philippine source texts through video games</em>.
+                    Animo Repository. Retrieved from
+                    <a href="https://animorepository.dlsu.edu.ph/akda/vol3/iss2/6/"
+                        target="_blank">animorepository.dlsu.edu.ph</a>
+                </div>
+
+                <div class="reference-card">
+                    Cuevas, G. B., Delmo, R. M., & Silorio, R. D. (2022). <em>Ang Nabuong Learners' Packet sa Ibong
+                        Adarna</em>.
+                    Retrieved from
+                    <a href="https://www.scribd.com/document/624037160/Cuevas-Et-Al-Final-Copy?hl=en-GB"
+                        target="_blank">scribd.com</a>
+                </div>
+
+                <div class="reference-card">
+                    Endiafe, J. P. S. (2022). <em>Persepsyon sa mga pagpapahalagang nakapaloob sa Ibong Adarna ng mga
+                        piling mag-aaral sa baitang & ng Gregorio Reyes National High School, San Narciso</em>.
+                    Retrieved from
+                    <a href="https://www.scribd.com/document/555814408/" target="_blank">scribd.com</a>
+                </div>
+
+                <div class="reference-card">
+                    Andrade, R. A. (2025). <em>Perceptions, interest, and comprehension of Ibong Adarna among Grade 7
+                        students</em>.
+                    <em>Pantao: The International Journal of the Humanities and Social Sciences</em>.
+                    Retrieved from
+                    <a href="https://pantaointernationaljournal.com/2025/08/11/publication-399-perceptions-interest-and-comprehension-of-ibong-adarna-among-grade-7-students-pananaw-kawilihan-at-pag-unawa-sa-ibong-adarna-ng-mga-mag-aaral-sa-grado-7/"
+                        target="_blank">pantaointernationaljournal.com</a>
+                </div>
+
+                <div class="reference-card">
+                    Yee, W. A. (2020). <em>Antas ng Interes sa pag-aaral ng Adarna</em>. Retrieved from
+                    <a href="https://www.coursehero.com/file/114808877/IBONG-ADARNA-tesisdocx/"
+                        target="_blank">coursehero.com</a>
+                </div>
+
+                <div class="reference-card">
+                    Marcos, P. P. A. (2023, June 4). <em>Ibong Adarna Kabanata 1-30 Buod</em>. Scribd. Retrieved from
+                    <a href="https://www.scribd.com/document/651708785/" target="_blank">scribd.com</a>
+                </div>
+
+                <div class="reference-card">
+                    Kaligirang pangkasaysayan ng Ibong Adarna. (n.d.). Retrieved from
+                    <a href="https://takdangaralin.ph/kaligirang-pangkasaysayan-ng-ibong-adarna/"
+                        target="_blank">takdangaralin.ph</a>
+                </div>
+
+                <div class="reference-card">
+                    Hanna, N. (2024). <em>PowerPoint Ibong Adarna</em>. Retrieved from
+                    <a href="https://www.slideshare.net/search?q=ibong+adarna&language=tl"
+                        target="_blank">slideshare.net</a>
+                </div>
+
+                <div class="reference-card">
+                    Bonsol, C. G. B. (2024). <em>Ibong Adarna: Buod ng Bawat Kabanata</em>. Retrieved from
+                    <a href="https://www.scribd.com/document/639886814/Untitled" target="_blank">scribd.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

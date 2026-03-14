@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 21 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson21_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Serpyenteng may Pitong Ulo</h2>
+            <<p>
+                Gumapang ang <b>serpyente</b> paakyat ng <b>hagdanan</b>. Agad hinarap ni <b>Don Juan</b> ang halimaw.
+                Maliksi si Don Juan kaya’t hindi siya nagawang <b>lingkisin</b> ng ahas. Tinagpas ni Don Juan ang ulo ng
+                serpyente ngunit muling tumubo iyon at nabuhay.
+                <br><br>
+                Nakaramdam ng pagod si Don Juan at sa gitna ng pakikipaglaban ay hindi niya nakalimutang
+                <b>manalangin</b>. Nanumbalik ang kanyang <b>sigla</b> at higit na naging matapang. Tatlong oras ang
+                itinagal ng kanilang labanan hanggang sa mapagod ang serpyente. Inihagis ni <b>Prinsesa Leonora</b> kay
+                Don Juan ang mabagsik na <b>balsamo</b> upang ilagay sa bawat ulong matatagpas.
+                <br><br>
+                Lalong nagalit ang serpyente at muling <b>hinalihaw</b> si Don Juan. Agad namang nakaiwas sa tiyak na
+                kamatayan ang prinsipe. Muling umigkas ang <b>espada</b> ng matapang na prinsipe hanggang sa natagpas
+                ang pinakahuling ulo ng ahas. Hindi na iyon tumubo makaraang lagyan ng balsamo. Naiakyat sa itaas ng
+                balon ang dalawang prinsesa. Nalaman ng dalawang kapatid ni Don Juan ang pagpaslang niya sa higante at
+                ahas upang mailigtas ang dalawa. Muling nanaig ang inggit kay <b>Don Pedro</b> lalo pa at nabighani ito
+                ng kagandahan ni Prinsesa Leonora.
+                </p>
+
+                <br><br>
+
+                <h3>Talasalitaan</h3>
+                <ul>
+                    <li><b>Lingkisin</b> – balutin o yakapin ng ahas ang katawan ng biktima</li>
+                    <li><b>Manalangin</b> – magdasal o humingi ng tulong sa Diyos</li>
+                    <li><b>Sigla</b> – lakas at enerhiya ng katawan</li>
+                    <li><b>Balsamo</b> – gamot o pamahid na ginagamit sa sugat</li>
+                    <li><b>Hinalihaw</b> – malakas na paghampas o pag-atake ng halimaw</li>
+                    <li><b>Umigkas</b> – mabilis na paggalaw o pag-angat ng sandata</li>
+                    <li><b>Natagpas</b> – naputol o nahiwa sa pamamagitan ng matalim na bagay</li>
+                    <li><b>Naiakyat</b> – naitaas o nadala pataas</li>
+                    <li><b>Pagpaslang</b> – pagpatay o pagkitil ng buhay</li>
+                    <li><b>Nanaig</b> – nagtagumpay o nanalo sa damdamin o sitwasyon</li>
+                </ul>
+
+                <!-- Complete / Next Lesson button -->
+                <div class="complete-btn-wrap">
+                    <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+                </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(21); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

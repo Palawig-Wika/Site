@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 13 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson13_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Aralin 13</h2>
+            <p>
+                Nakabalik ng kaharian ng <b>Berbanya</b> si <b>Don Juan</b>. Namutla sina <b>Don Pedro</b> at <b>Don
+                    Diego</b> nang makita ang bunsong kapatid. Agad lumuhod sa harapan ng hari si Don Juan habang
+                nakaratay pa rin sa higaan ang ama. Umawit ang <b>Ibong Adarna</b> at inilahad ang buong katotohanan.
+                <br><br>
+                Pitong ulit itong nagpakitang gilas ng <b>pagpapalit</b> ng balahibo habang isinasalaysay ang mga
+                pinagdaanang hirap ni Don Juan hanggang pagtaksilan ng dalawang <b>sukab</b> na prinsipe. Matapos ang
+                ikapitong awit ng ibon ay tila hindi man lamang nagkaroon ng karamdaman ang hari at bigla itong
+                nakatayo. Sa labis na kagalakan ay niyakap si Don Juan at hinagkan pati ang ibon.
+                <br><br>
+                Tinipon niya ang mga kagawad ng palasyo upang hatulan na ipatapon sina Don Pedro at Don Diego bilang
+                kaparusahan. Nahabag si Don Juan sa mga kapatid kaya agad lumuhod sa harap ng ama. Inihingi niya ng
+                <b>kapatawaran</b> ang dalawang kapatid. Lumambot ang puso ng hari dahil sa kababang loob ng kanyang
+                bunso. Pinatawad ng hari ang dalawang prinsipe sa pangakong hindi na mauulit ang kataksilang iyon
+                sapagkat sa susunod ay kamatayan na ang magiging kapalit. Labis ang kagalakang niyakap ni Don Juan ang
+                dalawang kapatid. Nagbalik ang kasiyahan sa buong palasyo dahil sa tuluyang paggaling ng hari na naging
+                aliwan ang pag-awit ng Ibong Adarna.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Pagpapalit</b> – pagbabago o pagpapalit ng anyo o katangian</li>
+                <li><b>Sukab</b> – traydor o taksil sa pamilya</li>
+                <li><b>Kapatawaran</b> – pagbibigay ng pardon o hindi pagpaparusa sa nagkamali</li>
+                <li><b>Aliwan</b> – kasiyahan o libangan</li>
+                <li><b>Pinatawad</b> – pinalampas ang kasalanan o kamalian ng iba</li>
+                <li><b>Hatulan</b> – pagbibigay ng hatol o desisyon sa kasalanan</li>
+                <li><b>Lumambot</b> – nagbago ang damdamin o puso, naging maawain</li>
+                <li><b>Kagalakan</b> – matinding saya o tuwa</li>
+                <li><b>Kagawad</b> – opisyal o tagapamahala sa palasyo</li>
+                <li><b>Pag-awit</b> – pagtugtog o pag-awit bilang paraan ng pagpapahayag o aliwan</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(13); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 26 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson26_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Panangis ni Leonora</h2>
+            <p>
+                Habang patuloy sa paglalakbay si <b>Don Juan</b>, patuloy namang nalulungkot at umiiyak si <b>Prinsesa
+                    Leonora</b> dahil sa pagkawala niya. Sa tuwing dumadalaw si <b>Don Pedro</b>, hindi siya
+                pinagbubuksan ng prinsesa dahil si Don Juan lamang ang kanyang mahal. Kahit sabihin ni Don Pedro na
+                patay na si Don Juan at pilitin siyang kalimutan ito, nanatiling <b>tapat</b> si Prinsesa Leonora at
+                hindi pumayag na pakasalan siya kahit matagal na siyang naghihintay.
+                <br><br>
+                Samantala, nagpatuloy si Don Juan sa kanyang mahabang <b>paglalakbay</b> upang tuparin ang kanyang
+                <b>layunin</b>. Inabot siya ng limang buwan sa paglalakad at pagtawid sa pitong <b>bundok</b>. Sa wakas,
+                narating niya ang <b>dampa</b> ng isang <b>ermitanyo</b> na maaaring makatulong sa kanya sa kanyang
+                paglalakbay.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Tapat</b> – nananatiling maaasahan at hindi nagtataksil sa damdamin</li>
+                <li><b>Paglalakbay</b> – mahabang pagtahak sa iba’t ibang lugar upang marating ang mithiin</li>
+                <li><b>Layunin</b> – hangarin o bagay na nais makamit</li>
+                <li><b>Bundok</b> – mataas at matayog na anyong lupa</li>
+                <li><b>Dampa</b> – maliit at payak na tirahan o bahay</li>
+                <li><b>Nawawala</b> – nawala o hindi matunton</li>
+                <li><b>Pag-ibig</b> – damdamin ng pagmamahal sa ibang tao</li>
+                <li><b>Hihintay</b> – magtitiis o mananatili sa isang lugar habang inaasam ang isang pangyayari</li>
+                <li><b>Pakasalan</b> – ipagkaloob ang kasal sa isang tao</li>
+                <li><b>Paglakad</b> – paggalaw sa pamamagitan ng paa upang marating ang destinasyon</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(26); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 41 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson41_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Pagbawi sa Puso ni Don Juan</h2>
+            <p>
+                Sinalubong ng <b>tugtugan</b> ang pagdating ni <b>Maria Blanca</b>, na nagpapanggap bilang
+                <b>emperatris</b>. Pansamantalang hininto ang kasal upang parangalan ang mahalagang <b>bisita</b>. Labis
+                ang <b>pighati</b> ni Maria Blanca dahil nakikita niya si <b>Don Juan</b> na nakatuon sa pansin kay
+                <b>Prinsesa Leonora</b>.
+                <br><br>
+                Ipinaalam niya ang kanyang <b>pakay</b> sa pagdalo sa kasal at sinabi na may inihandang <b>laro</b>
+                bilang handog sa ikakasal. Humiling siya ng <b>prasko</b> na may lamang <b>tubig</b> sa kanyang
+                <b>diyamante</b>, at biglang lumitaw ang prasko na may dalawang maliliit na <b>ita</b> sa loob.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Tugtugan</b> – musika o awit na nagbibigay ng kasiyahan sa isang pagtitipon</li>
+                <li><b>Pighati</b> – matinding lungkot o dalamhati</li>
+                <li><b>Pakay</b> – layunin o dahilan sa isang kilos o gawa</li>
+                <li><b>Laro</b> – palaro o pagsubok na inihanda bilang kasiyahan o hamon</li>
+                <li><b>Prasko</b> – sisidlan o lalagyan, kadalasan para sa pagkain o likido</li>
+                <li><b>Itas</b> – maliit na hayop o bagay na inilalagay sa sisidlan (dito ay maaaring tumukoy sa itlog
+                    ng ibon o maliit na nilalang sa kuwento)</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(41); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

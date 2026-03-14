@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 17 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson17_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Mahiwagang Balon ng Armenya</h2>
+            <p>
+                Isang <b>balon</b> ang nakita ng tatlong magkakapatid na prinsipe. Ang bunganga ng balon ay batong
+                <b>marmol</b> na makinis at ang lumot sa paligid ay mga gintong nakaukit. Mangha ang tatlong prinsipe
+                habang nakaringin sa napakalalim na balon gayong wala itong tubig. May <b>lubid</b> na naroon upang
+                magamit ng sinumang nais magtangkang bumaba.
+                <br><br>
+                Naunang bumaba ng balon si <b>Don Pedro</b> sapagkat siya ang panganay. Tatlumpung <b>dipa</b> lamang
+                ang nalusong ni Don Pedro sapagkat hindi niya nagawang tagalan ang labis na kadiliman sa loob ng balon.
+                Ang sumunod na bumabang balon ay si <b>Don Diego</b> ngunit hindi rin niya iyon nagawang tagalan.
+                Natulala sa takot ang pangalawang prinsipe nang tangkaing tuklasin ang lihim ng balon.
+                <br><br>
+                Si <b>Don Juan</b> ang pinakahuling sumubok na bumaba ng balon. Bagama't napakadilim sa loob ng balon ay
+                buong tapang na hinarap ni Don Juan ang malaking takot na hindi nagawang harapin ng dalawang kapatid.
+                Malalim na ang narating ni Don Juan at patuloy pa rin siya sa pagbaba. Naiinip na si Don Pedro sapagkat
+                hindi pa umaahon si Don Juan samantalang nababahala na si Don Diego na baka napahamak ang bunsong
+                kapatid.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Balon</b> – hukay o butas sa lupa na karaniwang ginagamit para sa tubig</li>
+                <li><b>Marmol</b> – matibay at makinis na bato na ginagamit sa paggawa ng gusali o palamuti</li>
+                <li><b>Lumot</b> – halamang tumutubo sa bato o lupa, karaniwang berde at malambot</li>
+                <li><b>Lubid</b> – tali na ginagamit para maghilom o magtaas-baba ng bagay o tao</li>
+                <li><b>Magtangkang</b> – subukan o subukang gawin ang isang bagay</li>
+                <li><b>Dipa</b> – sukat o haba ng braso mula dulo ng daliri hanggang sa balikat</li>
+                <li><b>Tagalan</b> – magtagal o manatili sa isang gawain o lugar</li>
+                <li><b>Kadiliman</b> – kawalan ng liwanag o dilim</li>
+                <li><b>Natulala</b> – napatigil o nabigla dahil sa takot o gulat</li>
+                <li><b>Nababahala</b> – nag-aalala o may pangamba para sa kapakanan ng iba</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(17); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

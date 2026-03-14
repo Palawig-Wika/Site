@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 15 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson15_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang muling Paglisan ng bunsong Prinsipe</h2>
+            <p>
+                Hindi pa man nagliliwanag ay nagpasya nang lumisan si <b>Don Juan</b> sapagkat nabatid na niya ang
+                naging pagkakamali at kailangan niyang magtago. Sa paggising ng hari sa umagang iyon ay agad nagtungo sa
+                silid na kinaroroonan ng <b>Ibong Adarna</b>. Laking panggigilalas niya nang malamang wala ang ibon sa
+                <b>hawla</b>.
+                <br><br>
+                Agad ipinatawag ng hari ang tatlong anak subalit dalawa lamang ang humarap. Muling humabi ng
+                <b>kasinungalingan</b> ang dalawang buhong na prinsipe subalit hindi agad sila pinaniwalaan ng hari.
+                Ipinahanap ng hari ang bunsong anak ngunit hindi na ito natagpuan sa loob ng palasyo. Sinabi nina <b>Don
+                    Diego</b> at <b>Don Pedro</b> na nagtaksil si Don Juan at kanilang hahanapin upang iharap sa ama
+                para mapatawan ng parusa.
+                <br><br>
+                Umalis ang dalawa upang hanapin ang nagtatagong si Don Juan. Nilakbay nila ang <b>bukid</b>,
+                <b>burol</b> at <b>bundok</b> subalit hindi nila natagpuan ang bunsong kapatid. Hanggang sa narating
+                nila ang kabundukan ng <b>Armenya</b> kung saan naroon si Don Juan.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Gigilalas</b> – labis na pagkabigla o pagkaulat</li>
+                <li><b>Kasinungalingan</b> – panlilinlang o hindi pagsasabi ng katotohanan</li>
+                <li><b>Pinaniwalaan</b> – tinanggap bilang totoo o katotohanan</li>
+                <li><b>Mapatawan</b> – bibigyan ng parusa o hatol</li>
+                <li><b>Bukid</b> – lupaing sakahan o taniman</li>
+                <li><b>Burol</b> – maliit na bundok o mataas na lupa</li>
+                <li><b>Kabundukan</b> – hanay o lugar na may maraming bundok</li>
+                <li><b>Nagtatagong</b> – nagkubli o nagtago upang hindi makita</li>
+                <li><b>Lumisan</b> – umalis o naglakbay palabas</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(15); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

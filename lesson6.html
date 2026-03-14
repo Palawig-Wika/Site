@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 6 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson6_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Leprosong Ermitaniyo</h2>
+            <p>
+                Habang nagpapahinga si Don Juan sa paanan ng Bundok Tabor ay nilapitan siya ng isang matandang
+                <b>pulubi</b> na humihingi ng limos. Ang matanda ay may malubhang karamdaman at halos hindi na makalakad
+                dahil sa kahinaan ng katawan. Sa kabila ng kakaunting baon, buong pusong ibinigay ni Don Juan ang isa sa
+                kaniyang mga tinapay upang maibsan ang gutom ng matanda. Dahil sa kabutihang ipinakita ng prinsipe,
+                nagbigay ang matanda ng mahalagang <b>tagubilin</b> bago siya umalis.
+                <br><br>
+                Sinabi ng matanda kay Don Juan na huwag siyang <b>masilaw</b> sa nakasisilaw na kinang ng punong Piedras
+                Platas sapagkat maaari itong makapagpahina ng kaniyang loob. Ipinayo rin ng matanda na pumunta siya sa
+                isang maliit na <b>dampa</b> sa bundok kung saan nakatira ang isang matandang <b>ermitanyo</b> na
+                makatutulong sa kaniya sa paghuli sa Ibong Adarna. Agad na tinahak ni Don Juan ang daan patungo sa
+                tirahan ng ermitanyo at buong paggalang na humingi ng tulong dito.
+                <br><br>
+                Ipinaliwanag ng ermitanyo na ang Ibong Adarna ay isang <b>engkantado</b> at mahiwagang nilalang. Ayon sa
+                kaniya, ang ibon ay umaawit ng pitong beses bago ito makatulog. Pagkatapos nitong umawit ay
+                <b>dudumi</b> ito, at ang sinumang matamaan ng ipot nito ay agad na magiging bato. Upang hindi makatulog
+                sa nakaaantok na awit ng ibon, pinayuhan ng ermitanyo si Don Juan na <b>hiwain</b> ang kaniyang palad at
+                pigaan ito ng <b>dayap</b> upang manatiling gising.
+                <br><br>
+                Bilang huling tulong, ibinigay ng ermitanyo kay Don Juan ang isang <b>sintas</b> na yari sa ginto.
+                Sinabi niyang gamitin ito upang mahuli at maitali ang Ibong Adarna kapag ito ay tulog na. Nagpasalamat
+                si Don Juan sa ermitanyo at naghanda sa pagsasagawa ng kaniyang mapanganib na gawain.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Pulubi</b> – taong namamalimos o humihingi ng tulong sa iba</li>
+                <li><b>Tagubilin</b> – payo o bilin na dapat sundin</li>
+                <li><b>Masilaw</b> – maakit o mabighani sa liwanag o kinang</li>
+                <li><b>Dampa</b> – maliit at payak na tirahan</li>
+                <li><b>Ermitanyo</b> – taong namumuhay nang mag-isa sa isang liblib na lugar</li>
+                <li><b>Engkantado</b> – mahiwagang nilalang na may kapangyarihang sobrenatural</li>
+                <li><b>Dudumi</b> – paglalabas ng dumi ng hayop o ibon</li>
+                <li><b>Hiwain</b> – putulin o sugatan gamit ang matalim na bagay</li>
+                <li><b>Dayap</b> – uri ng maasim na prutas na kahawig ng kalamansi</li>
+                <li><b>Sintas</b> – tali o panali na ginagamit upang magbigkis</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(6); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

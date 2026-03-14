@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 18 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson18_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Kaakit-akit na si Donya Juana</h2>
+            <p>
+                Patuloy pa rin sa pagbaba si <b>Don Juan</b> hanggang sa marating niya ang pinakamalalim na bahagi ng
+                <b>balon</b>. Namangha siya dahil isang magandang <b>hardin</b> ang kaniyang nasaksihan. Ito ang
+                natatagong paraiso sa <b>Armenya</b>. Puno ng halaman at <b>bulaklak</b> sa paligid. Nagiging makulay at
+                masamyo ang amoy ng kapaligiran dahil sa mga ito.
+                <br><br>
+                Nakita ni Don Juan ang <b>palasyo</b> na yari sa ginto at pilak dahilan kung bakit ito nangingislap.
+                Nasilayan din niya ang isang dalaga na diyosa sa kagandahan. Siya ay si <b>Donya Juana</b>. Di
+                makapaniwala ang dalaga na narating ni Don Juan ang lugar na iyon. Lumuhod si Don Juan upang magpakilala
+                bilang prinsipe ng Armenya.
+                <br><br>
+                Humingi din ito ng <b>paumanhin</b> dahil sa mapangahas na pagpunta sa lugar na iyon. Sumamo si Don Juan
+                na tanggapin ng dalaga ang kaniyang pag-ibig. Hindi naman ito nasawi dahil inibig din siya ng dalaga.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Hardin</b> – lugar na taniman ng mga halaman at bulaklak</li>
+                <li><b>Bulaklak</b> – bahagi ng halaman na karaniwang mabango at makulay</li>
+                <li><b>Masamyo</b> – mabango o kaaya-ayang amoy</li>
+                <li><b>Nangingislap</b> – kumikislap o kumikinang sa liwanag</li>
+                <li><b>Nasilayan</b> – nakita o namasdan</li>
+                <li><b>Dalaga</b> – babaeng wala pang asawa</li>
+                <li><b>Mapangahas</b> – matapang na gumawa ng bagay kahit may panganib</li>
+                <li><b>Paumanhin</b> – paghingi ng tawad o sorry</li>
+                <li><b>Sumamo</b> – nagmakaawa o nagmakausap nang may paggalang</li>
+                <li><b>Nasawi</b> – nabigo o hindi nagtagumpay</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(18); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

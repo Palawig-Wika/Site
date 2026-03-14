@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralin 46 - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson46_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+
+        <div class="content-card">
+            <h2>Ang Hari at Reyna ng Reyno Delos Cristales</h2>
+            <p>
+                Ipinagtaka ni <b>Don Juan</b> kung gaano kabilis sila nakarating sa <b>Reyno de los Cristales</b>. Kung
+                ang una niyang paglalakbay ay inabot ng isang buwan, ngayon ay nakarating sila sa loob lamang ng isang
+                oras. Matagal nang yumao ang amang hari at ang mga kapatid na prinsesa, ngunit nanatiling
+                <b>mapayapa</b> ang kaharian kahit nasa pamumuno ng iba.
+                <br><br>
+                Masayang tinanggap ng mga <b>mamamayan</b> ang pagdating ni <b>Maria Blanca</b> bilang bagong reyna, at
+                ang mga isinumpa ni <b>Haring Salermo</b> ay nakalaya na. Nagdaos ng malaking <b>piging</b> sa kaharian,
+                at ipinahayag ni Maria Blanca na si Don Juan ang bagong hari. Nagdiwang ang kaharian ng siyam na araw,
+                at mas lalo pang umunlad ang <b>Reyno de los Cristales</b> dahil sa mahusay na pamamalakad ng hari at
+                reyna.
+            </p>
+
+            <br><br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Mapayapa</b> – maayos, tahimik, at walang gulo</li>
+                <li><b>Mamamayan</b> – mga tao o nasasakupan ng isang kaharian o bayan</li>
+                <li><b>Piging</b> – malaking handaan o kasiyahan</li>
+                <li><b>Umunlad</b> – sumulong o naging mas maayos ang kalagayan</li>
+                <li><b>Pamamalakad</b> – paraan ng pamumuno o pamamahala</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(46); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>

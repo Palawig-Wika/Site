@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ang Berbanya - Palawig-Wika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/lesson1_background-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+
+        /* Complete / Next button */
+        .complete-btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        #complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #eab308;
+            color: #1a1a2e;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        #complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(234, 179, 8, 0.4);
+        }
+
+        #complete-btn.complete-btn-done {
+            background: rgba(234, 179, 8, 0.25);
+            color: #fcd34d;
+            border: 1px solid #eab308;
+        }
+
+        #complete-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
+        <div class="header-text">
+            <h1><a href="index.html">Palawig-Wika</a></h1>
+            <p>WIKA NG PAGLAYA</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="back-btn-wrap">
+            <a href="lessons.html" class="back-btn">← Bumalik sa Mga Aralin</a>
+        </div>
+
+        <div class="content-card">
+            <h2>Ang Berbanya</h2>
+            <p>
+                Ang Berbanya ay isang mayamang kaharian na kung saan <b>sagana</b> ang biyaya, tahimik, at mapayapa ang
+                pamumuhay. Madalas na may <b>piging</b> at <b>pagdiriwang</b> na nagaganap sa kaharian sapagkat
+                masayahin ang hari't reyna. May tatlo silang anak na lalaki na pawang may kakayahang <b>magmana</b> ng
+                trono. Sila ay sina Don Pedro, Don Diego, at ang <b>bunsong</b> si Don Juan.
+                <br><br>
+                <b>Nakatakda</b> na silang papiliin kung ang <b>pagpapari</b> o paglilingkod sa kaharian ng Berbanya ang
+                tatahaking landas. Walang <b>nakahihigit</b> sa tatlong prinsipe kung likas na galing at talino ang
+                pagbabatayan; kaya naman silang lahat ay itinanghal na mga <b>tagapaglingkod</b> ng palasyo.
+            </p>
+
+            <br>
+
+            <h3>Talasalitaan</h3>
+            <ul>
+                <li><b>Sagana</b> – maraming biyaya o masaganang pamumuhay</li>
+                <li><b>Piging</b> – handaan o malaking salu-salo</li>
+                <li><b>Pagdiriwang</b> – pagdaraos ng kasiyahan o selebrasyon</li>
+                <li><b>Kaharian</b> – lupain o bansang pinamumunuan ng hari o reyna</li>
+                <li><b>Magmana</b> – tumanggap ng ari-arian o posisyon mula sa magulang</li>
+                <li><b>Bunsong</b> – pinakahuling anak sa magkakapatid</li>
+                <li><b>Nakatakda</b> – nakaplano o itinakda na mangyari</li>
+                <li><b>Pagpapari</b> – pagiging pari o paglilingkod sa simbahan</li>
+                <li><b>Nakahihigit</b> – mas mataas o mas magaling kaysa iba</li>
+                <li><b>Tagapaglingkod</b> – taong naglilingkod o tumutupad ng tungkulin</li>
+            </ul>
+
+            <!-- Complete / Next Lesson button -->
+            <div class="complete-btn-wrap">
+                <button id="complete-btn">Tapos na ang Aralin — Susunod na Aralin →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&#169;&nbsp; 2025-2026 Palawig-Wika. All rights reserved.</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <img src="images/logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script src="sidebar.js"></script>
+    <script src="progress.js"></script>
+    <script>
+        initLessonPage(1); // <-- Change this number for each lesson file
+    </script>
+</body>
+
+</html>
