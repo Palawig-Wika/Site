@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const sidebarHTML = `
         <div class="sidebar" id="sidebar">
             <div class="sidebar-brand">
-                <img src="images/header main logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
+                <img src="header main logo.png" alt="Palawig-Wika Logo" class="sidebar-logo">
             </div>
             <a href="gabay.html">Gabay</a>
             <a href="layunin.html">Layunin</a>
