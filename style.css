@@ -16,7 +16,7 @@ body {
 
 .header {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('header background Image.jpg') center center no-repeat;
+        url('images/header background Image.jpg') center center no-repeat;
     background-size: cover;
     background-color: #1a1a2e;
     padding: 1.2rem 1.5rem;
@@ -141,7 +141,7 @@ body {
 
 
 .hero {
-    background: url('hero_section_background-image.jpg') no-repeat center center;
+    background: url('images/hero_section_background-image.jpg') no-repeat center center;
     background-size: cover;
     color: #2c2c2c;
     display: flex;

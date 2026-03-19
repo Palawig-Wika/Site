@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ano ang Korido? - Palawig-Wika</title>
     <link rel="stylesheet" href="style.css">
+
     <style>
         body {
-            background: url('background%20image%202.gif') no-repeat center center fixed;
+            background: url('images/background%20image%202.gif') no-repeat center center fixed;
             background-size: cover;
             background-color: #1a1a2e;
         }
 
         .korido-nav {
             width: 100%;
-            max-width: 680px;
+            max-width: 900px;
             margin-bottom: 1rem;
         }
 
@@ -23,7 +24,6 @@
             display: inline-block;
             background: rgba(26, 26, 46, 0.85);
             backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(234, 179, 8, 0.3);
             border-radius: 8px;
             padding: 0.6rem 1.2rem;
@@ -31,154 +31,149 @@
             text-decoration: none;
             font-size: 1rem;
             font-weight: 600;
-            transition: background 0.3s;
         }
 
-        .back-btn:hover {
-            background: rgba(234, 179, 8, 0.2);
-            text-decoration: none;
+        /* ===== TWO BOX LAYOUT ===== */
+        .korido-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
         }
 
-        .korido-content {
+        .korido-box {
             background: rgba(26, 26, 46, 0.85);
             backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(234, 179, 8, 0.3);
             border-radius: 12px;
-            padding: 2.5rem;
-            max-width: 680px;
+            padding: 2rem;
             text-align: left;
         }
 
-        .korido-content p {
+        .korido-box p {
             color: #e2e8f0;
             font-size: 1.1rem;
             line-height: 1.9;
-            text-shadow: none;
         }
 
-        .korido-content strong {
+        .korido-box strong {
             color: #eab308;
+        }
+
+        .korido-box h2 {
+            text-align: center;
+            color: #e63946;
+            margin-bottom: 1rem;
+        }
+
+        .korido-box h3 {
+            color: #4361ee;
+            margin-bottom: 1rem;
+        }
+
+        /* example box stays SAME */
+        .example-box {
+            background: #f1f5ff;
+            border-left: 6px solid #4361ee;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: #000;
+        }
+
+        .example-box p,
+        .example-box li,
+        .example-box strong {
+            color: #000;
+        }
+
+        .example-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .example-box li {
+            background: white;
+            margin: 12px 0;
+            padding: 12px 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .korido-columns {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
+
     <header class="header">
         <span class="burger-icon" onclick="toggleSidebar()">&#9776;</span>
         <div class="header-text">
             <h1><a href="index.html">Palawig-Wika</a></h1>
-            <p>WIKA NG PAGLAYA</p>
         </div>
     </header>
 
     <section class="korido-page">
+
         <div class="korido-nav">
             <a href="korido.html" class="back-btn">← Bumalik</a>
         </div>
-        <style>
-            .korido-content {
-                max-width: 800px;
-                margin: auto;
-                font-family: Arial, sans-serif;
-                line-height: 1.7;
-            }
 
-            .korido-content h2 {
-                text-align: center;
-                color: #e63946;
-            }
+        <div class="korido-columns">
 
-            .korido-content h3 {
-                margin-top: 50px;
-                /* space before halimbawa */
-                color: #4361ee;
-            }
-
-            /* box for examples */
-            .example-box {
-                background: #f1f5ff;
-                border-left: 6px solid #4361ee;
-                padding: 20px;
-                border-radius: 10px;
-                margin-top: 20px;
-                color: #000;
-                /* black text */
-            }
-
-            .example-box p,
-            .example-box li,
-            .example-box strong {
-                color: #000;
-                /* ensure black text */
-            }
-
-            .example-box ul {
-                list-style: none;
-                padding-left: 0;
-            }
-
-            .example-box li {
-                background: white;
-                margin: 12px 0;
-                padding: 12px 15px;
-                border-radius: 8px;
-                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-            }
-        </style>
-
-
-        <div class="korido-content">
-            <h2>🌟 Ano ang Korido?</h2>
-
-            <p>
-                Ang <strong>korido</strong> ay isang <strong>mahabang tulang pasalaysay</strong> na parang kuwento na
-                may ritmo at tugma.
-                Isinusulat ito sa <strong>sukat na walo</strong>, ibig sabihin ay <strong>walong pantig sa bawat
-                    linya</strong>.
-                Naging bahagi ito ng panitikang Pilipino noong panahon ng mga Kastila at hanggang ngayon ay patuloy na
-                binabasa at kinagigiliwan.
-            </p>
-
-            <p>
-                Noong unang panahon, ginagamit ang korido bilang <strong>libangan at aliwan</strong> ng mga tao.
-                Ngunit hindi lang ito basta kuwento—naglalaman din ito ng <strong>mahahalagang aral sa buhay</strong>.
-                Sa pamamagitan ng mga pakikipagsapalaran, kabayanihan, at mahiwagang pangyayari,
-                natututo ang mga mambabasa tungkol sa <strong>kabutihan, katapatan, at tiyaga</strong>.
-            </p>
-
-            <h3>✨ Halimbawa ng Korido: Ibong Adarna</h3>
-
-            <div class="example-box">
+            <!-- LEFT BOX -->
+            <div class="korido-box">
+                <h2>🌟 Ano ang Korido?</h2>
 
                 <p>
-                    Ang <strong>Ibong Adarna</strong> ay isang kilalang halimbawa ng korido.
-                    Ito ay isang kuwento na puno ng <strong>pakikipagsapalaran, hiwaga, at kabayanihan</strong>.
+                    Ang <strong>korido</strong> ay isang <strong>mahabang tulang pasalaysay</strong> na tila kuwento na may ritmo at tugma. 
+                    Isinusulat ito sa <strong>sukat na walo</strong>, ibig sabihin ay <strong>walong pantig sa bawat linya</strong>. 
+                    Naging bahagi ito ng panitikang Pilipino noong panahon ng mga Kastila at hanggang ngayon ay patuloy na binabasa at kinagigiliwan.
                 </p>
-
-                <p><strong>Narito kung bakit ito isang korido:</strong></p>
-
-                <ul>
-                    <li>📖 <strong>Mahabang tulang pasalaysay</strong> – May walong pantig sa bawat linya.</li>
-
-                    <li>🗡️ <strong>May temang kabayanihan at hiwaga</strong> – Mga prinsipe ang naglalakbay upang
-                        hanapin ang mahiwagang Ibong Adarna.</li>
-
-                    <li>💡 <strong>Puno ng aral sa buhay</strong> – Ipinapakita ang kahalagahan ng katapatan,
-                        pagtitiyaga, kabutihan, at pagmamahal sa pamilya.</li>
-                </ul>
 
                 <p>
-                    🪶 Dahil sa mga mahiwagang pangyayari at kapana-panabik na paglalakbay, ang
-                    <strong>Ibong Adarna</strong> ay isa sa mga paboritong kuwento ng mga batang Pilipino.
+                    Noong unang panahon, ginagamit ang korido bilang <strong>libangan at aliwan</strong> ng mga tao. 
+                    Ngunit hindi lang ito basta kuwento—naglalaman din ito ng <strong>mahahalagang aral sa buhay</strong>. 
+                    Sa pamamagitan ng mga pakikipagsapalaran, kabayanihan, at mahiwagang pangyayari, 
+                    natututo ang mga mambabasa tungkol sa <strong>kabutihan, katapatan, at tiyaga</strong>.
                 </p>
-
             </div>
-        </div>
-        </ul>
 
+            <!-- RIGHT BOX -->
+            <div class="korido-box">
+                <h3>✨ Halimbawa ng Korido: Ibong Adarna</h3>
+
+                <div class="example-box">
+
+                    <p>
+                        Ang <strong>Ibong Adarna</strong> ay isang kilalang halimbawa ng korido. 
+                        Ito ay isang kuwento na puno ng <strong>pakikipagsapalaran, hiwaga, at kabayanihan</strong>.
+                    </p>
+
+                    <p><strong>Narito kung bakit ito isang korido:</strong></p>
+
+                    <ul>
+                        <li>📖 <strong>Mahabang tulang pasalaysay</strong></li>
+                        <li>🗡️ <strong>May temang kabayanihan at hiwaga</strong></li>
+                        <li>💡 <strong>Puno ng aral sa buhay</strong></li>
+                    </ul>
+
+                    <p>
+                        🪶 Dahil sa mga mahiwagang pangyayari at kapana-panabik na paglalakbay, ang 
+                        <strong>Ibong Adarna</strong> ay isa sa mga paboritong kuwento ng mga batang Pilipino.
+                    </p>
+
+                </div>
+            </div>
 
         </div>
+
     </section>
 
     <footer class="footer">
